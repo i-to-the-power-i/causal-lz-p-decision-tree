@@ -4,3 +4,4 @@ For example, to run the causal tree on the IRIS dataset, you will require the fi
 >python3 Driver_IRIS.py
 
 The folders CAUSALMETRIC-TESTING and CAUSALMETRIC-TUNING will be automatically created with the performance metrics and tuned hyperparameters respectively. Also a folder named "trees" will be created with the trained decision tree.   
+Python libraries required are numpy, pandas graphix, scikit-learn, ucimlrepo. They can be installed using the command "pip install ____"
