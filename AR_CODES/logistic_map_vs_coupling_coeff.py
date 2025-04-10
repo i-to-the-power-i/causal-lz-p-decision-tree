@@ -232,12 +232,12 @@ plt.savefig(RESULT_PATH_FINAL+"LZ-"+DATA_NAME+"-error-bar.png", format='png', dp
 plt.show()
 # Saving Results
 #### What happens at coupling coefficient = 0.4
-check_path = PATH + '/DATA/'  + DATA_NAME + '/' + str(0.4) +'/'
-Y_independent_data = io.loadmat(RESULT_PATH + 'Y_independent_data_class_0.mat')
-Y_independent_label = io.loadmat(RESULT_PATH + 'Y_independent_label_class_0.mat')
+check_path = PATH + '/DATA/'  + DATA_NAME + '/' + str(0.9) +'/'
+Y_independent_data = io.loadmat(check_path + 'Y_independent_data_class_0.mat')
+Y_independent_label = io.loadmat(check_path + 'Y_independent_label_class_0.mat')
 
-X_dependent_data = io.loadmat(RESULT_PATH + 'X_dependent_data_class_1.mat' )
-X_dependent_label = io.loadmat(RESULT_PATH + 'X_dependent_label_class_1.mat')
+X_dependent_data = io.loadmat(check_path + 'X_dependent_data_class_1.mat' )
+X_dependent_label = io.loadmat(check_path + 'X_dependent_label_class_1.mat')
 
 LEN_VAL = 50
 class_0_data_ = Y_independent_data['class_0_indep_raw_data'][0, 0:LEN_VAL]
