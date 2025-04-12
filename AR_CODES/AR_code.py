@@ -1,9 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Author: Harikrishnan NB
-Email ID: harikrishnannb@07@gmail.com
-Date: 22 Jan 2022
 
 
 Functions for genrating master-slave AR(1) coupled processes
