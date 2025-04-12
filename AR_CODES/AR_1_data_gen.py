@@ -1,9 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Author: Harikrishnan NB
-Email ID: harikrishnannb@07@gmail.com
-Date: 22 Sept 2024
+
 
 In this code, AR(1) master slave coupled timeseries data is generated. The coupling
 coefficient is varied from 0.1 to 1.0.
