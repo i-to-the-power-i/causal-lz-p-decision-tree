@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Jan  7 10:49:24 2022
-
-@author: harikrishnan
 """
 import os
 import numpy as np
