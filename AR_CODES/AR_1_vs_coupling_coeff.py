@@ -3,7 +3,6 @@
 """
 Created on Tue Oct 15, 2024
 
-@author: harikrishnan
 """
 
 
