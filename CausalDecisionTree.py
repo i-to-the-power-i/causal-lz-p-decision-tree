@@ -98,7 +98,7 @@ class CausalDecisionTree:
         return minpenalty
 
 
-    def LZ_penalty(sequence_gr, sequence_cmp):
+    def LZ_penalty(self, sequence_gr, sequence_cmp):
     #Initialize Grammar Sets G_x and G_y
         sub_strings_gr = set()
         sub_strings_cmp = set()
