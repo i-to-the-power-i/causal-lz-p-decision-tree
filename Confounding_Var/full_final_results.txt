@@ -1,0 +1,11 @@
+--- Experiment Results (from full 20x200 data) ---
+                 Average Strength of Causation               Variance              
+                                        X -> Y Y -> Z X -> Z   X -> Y Y -> Z X -> Z
+Causal Structure                                                                   
+Y -> Z                                  -34.03  51.05  19.24     0.55   0.68   1.32
+X->Y, Y->Z, Z->X                          0.00   0.00   0.00     0.00   0.00   0.00
+X -> Y, X -> Z                           48.79   0.40  49.17     0.22   0.35   0.42
+No connections                           -0.09  -0.03  -0.37     1.16   1.32   1.28
+X -> Y, Y -> Z                           17.25  49.48  66.02     0.46   0.51   0.33
+Y -> X, Z -> X                          -55.23  -0.19 -55.34     0.59   1.26   0.99
+X->Y, Z->Y, Z->X                         27.44 -76.99 -50.57     0.14   0.42   0.38

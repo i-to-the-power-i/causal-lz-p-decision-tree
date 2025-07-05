@@ -1,18 +1,36 @@
 import numpy as np
 
-def LZ_penalty(sequence_gr, sequence_cmp):
-    #Initialize Grammar Sets G_x and G_y
+def LZ_penalty(sequence_gr, sequence_cmp, sequence_condn):
+    #Initialize Grammar Sets G_x and G_y, G_z
     sub_strings_gr = set()
     sub_strings_cmp = set()
+    sub_strings_condn = set()
     #Initialize SubString pointers
     ind_gr = 0
     inc_gr = 1
     ind_cmp = 0
     inc_cmp = 1
+    ind_condn = 0
+    inc_condn = 1
     #Initialize overlap extent to 0
     overlap = 0
     #Main loop
     while True:
+        #Find a substring not in G_Z
+        while True:
+            if ind_condn + inc_condn > len(sequence_condn):
+                break
+            sub_str_condn = sequence_condn[ind_condn : ind_condn + inc_condn]
+            if sub_str_condn in sub_strings_condn:
+                inc_condn += 1
+            else:
+                break
+        #Add it to G_z if such a substring exists. Move pointers to next part of the string.
+        if ind_condn + inc_condn <= len(sequence_condn):
+            sub_strings_condn.add(sub_str_condn)
+            ind_condn += inc_condn
+            inc_condn = 1
+
         #Find a substring not in G_x
         while True:
             if ind_gr + inc_gr > len(sequence_gr):
@@ -22,9 +40,10 @@ def LZ_penalty(sequence_gr, sequence_cmp):
                 inc_gr += 1
             else:
                 break
-        #Add it to G_x if such a substring exists. Move pointers to next part of the string.
+        #Add it to G_x if such a substring exists, only if not present in G_x. Move pointers to next part of the string. 
         if ind_gr + inc_gr <= len(sequence_gr):
-            sub_strings_gr.add(sub_str_gr)
+            if sub_str_gr not in sub_strings_condn:
+                sub_strings_gr.add(sub_str_gr)
             ind_gr += inc_gr
             inc_gr = 1
         
@@ -49,5 +68,6 @@ def LZ_penalty(sequence_gr, sequence_cmp):
         # print(sub_strings_gr, sub_strings_cmp)
     return len(sub_strings_cmp) - overlap
    
-def calc_penalty(x,y):
-    return LZ_penalty(x,y), LZ_penalty(y,x)
+def calc_strength(x,y,z): #gives causal strength for the hypothesis X->Y
+    return LZ_penalty(y,x,z) - LZ_penalty(x,y,z) 
+
