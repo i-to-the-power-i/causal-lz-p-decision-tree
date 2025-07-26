@@ -11,7 +11,7 @@ NO_OF_BINS = 2
 N_OUTER_TRIALS = 20
 CAUSAL_STRUCTURES = [
     {"name": "Y -> Z", "params": {'d': 0.5, 'a': 0.8, 'g': 0.8, 'i': 0.8}},
-    {"name": "X->Y, Y->Z, Z->X", "params": {'c': 0.8, 'f': 0.8, 'i': 0.8, 'a': 0.8, 'd': 0.8, 'g': 0.8}},
+    {"name": "X->Y, Y->Z, Z->X", "params": {'c': 0.1, 'f': 0.1, 'i': 0.1, 'a': 0.5, 'd': 0.5, 'g': 0.5}},
     {"name": "X -> Y, X -> Z", "params": {'f': 0.8, 'h': 0.8, 'a': 0.8, 'd': 0.8, 'g': 0.8}},
     {"name": "No connections", "params": {'a': 0.8, 'd': 0.8, 'g': 0.8}},
     {"name": "X -> Y, Y -> Z", "params": {'a': 0.5, 'd': 0.5, 'g': 0.8, 'f': 0.8, 'i': 0.8}},
